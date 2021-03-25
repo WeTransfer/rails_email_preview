@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
     s.metadata = { 'issue_tracker' => 'https://github.com/glebm/rails_email_preview' }
   end
 
-  # We need to remove acivestorage, which is a dependency of Rails
+  # We need to remove activestorage, which is a dependency of Rails
   # until https://github.com/rails/rails/issues/41750 is solved
   # beginning of Rails dependencies
   rails_version = ['~> 5.2', '< 6.0']
