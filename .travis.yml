@@ -1,12 +1,9 @@
 language: ruby
 os: linux
 rvm:
-  - 2.3.8
-  - jruby-9
-  - rbx-3
+  - 2.6
+  - 2.7
 gemfile:
-  - spec/gemfiles/rails_4_2.gemfile
-  - spec/gemfiles/rails_5_0.gemfile
   - spec/gemfiles/rails_5_2.gemfile
 git:
   submodules: false
@@ -21,15 +18,6 @@ jobs:
     gemfile: spec/gemfiles/rails_4_2.gemfile
 cache: bundler
 bundler_args: --path ../../vendor/bundle --without debug
-
-before_install:
-  # Rails 4.x requires bundler version < 2.0.
-  - >
-    if [[ $BUNDLE_GEMFILE == "${PWD}/spec/gemfiles/rails_4_2.gemfile" ]]; then
-      "find /home/travis/.rvm/rubies -wholename '*default/bundler-*.gemspec' -delete"
-      gem install bundler --version='~> 1.17'
-      bundler --version
-    fi
 
 script:
 - >
