@@ -4,7 +4,6 @@ rvm:
   - 2.6
   - 2.7
 gemfile:
-  - spec/gemfiles/rails_5_0.gemfile
   - spec/gemfiles/rails_5_2.gemfile
 git:
   submodules: false
